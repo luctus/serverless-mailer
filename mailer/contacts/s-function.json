@@ -20,9 +20,7 @@
       "authorizerFunction": false,
       "apiKeyRequired": false,
       "requestParameters": {},
-      "requestTemplates": {
-        "application/json;charset=UTF-8": ""
-      },
+      "requestTemplates": "$${apiRequestContactCreateTemplate}",
       "responses": {
         "400": {
           "statusCode": "400"
