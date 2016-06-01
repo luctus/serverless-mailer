@@ -1,0 +1,17 @@
+{
+  "name": "serverless-mailer",
+  "version": "0.0.1",
+  "description": "A Serverless Project and its Serverless Plugin dependencies.",
+  "author": "Gustavo Garcia",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/"
+  },
+  "dependencies": {
+    "dynamodb": "^0.3.6",
+    "dynamodb-doc": "^1.0.0",
+    "node-uuid": "^1.4.7"
+  }
+}

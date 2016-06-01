@@ -1,0 +1,13 @@
+{
+  "apiRequestPostCreateTemplate": {
+    "application/json": {
+      "operation": "create",
+      "tableName": "mailer-contacts",
+      "payload": {
+        "Contact": {
+          "content": "$input.json('$')"
+        }
+      }
+    }
+  }
+}
