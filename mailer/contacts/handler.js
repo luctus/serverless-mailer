@@ -26,5 +26,15 @@ module.exports.handler = function(event, context, cb) {
           context.succeed(response.Item);
       });
       break;
+
+    case 'update':
+      console.log("Updating contact " + event.payload.Item.email);
+      dynamo.putItem(event.payload, function(err, response){
+        if(err)
+          context.done(err);
+        else
+          context.succeed(event.payload.Item);
+      });
+      break;
   }
 };

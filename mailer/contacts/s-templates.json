@@ -16,5 +16,13 @@
         }
       }
     }
+  },
+  "apiRequestContactUpdateTemplate": {
+    "application/json": {
+      "operation": "update",
+      "payload": {
+        "Item": "$input.json('$')" 
+      }
+    }
   }
 }
