@@ -5,6 +5,8 @@ var dynamo = new doc.DynamoDB();
 
 module.exports.handler = function(event, context, cb) {
 
+  event.payload.TableName = event.tableName;
+
   dynamo.putItem(event.payload, function(err, response){
     if(err)
       context.done(err);
