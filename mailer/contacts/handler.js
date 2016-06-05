@@ -36,5 +36,14 @@ module.exports.handler = function(event, context, cb) {
           context.succeed(event.payload.Item);
       });
       break;
+
+    case 'delete':
+      console.log("Deleting contact " + event.payload.Key.email);
+      dynamo.deleteItem(event.payload, function(err, response){
+        if(err)
+          context.done(err);
+        else
+          context.succeed(response);
+      });
   }
 };

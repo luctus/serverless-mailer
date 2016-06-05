@@ -24,5 +24,15 @@
         "Item": "$input.json('$')" 
       }
     }
+  },
+  "apiRequestContactDeleteTemplate": {
+    "application/json": {
+      "operation": "delete",
+      "payload": {
+        "Key": {
+          "email": "$input.params('email')" 
+        }
+      }
+    }
   }
 }
