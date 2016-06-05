@@ -1,9 +1,19 @@
 {
   "apiRequestContactCreateTemplate": {
     "application/json": {
-      "tableName": "mailer-contacts",
+      "operation": "create",
       "payload": {
         "Item": "$input.json('$')"
+      }
+    }
+  },
+  "apiRequestContactReadTemplate": {
+    "application/json": {
+      "operation": "read",
+      "payload": {
+        "Key": {
+          "email": "$input.params('email')" 
+        }
       }
     }
   }
